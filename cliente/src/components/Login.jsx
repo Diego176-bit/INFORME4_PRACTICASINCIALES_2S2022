@@ -2,7 +2,33 @@
 import React from 'react'
 import usacLogo from '../img/fiusac_negro.png'
 import '../stylesheets/Login.css'
+import {useState} from 'react'
+import axios from 'axios'
 function Login(){
+
+    const [body, setBody] = useState({username: '', password: ''})
+
+    //aplicar cambios en el input
+    const inputChange = ({target}) =>{
+        const {name, value} = target
+        setBody({
+            
+            ...body,
+            [name]:value
+        })
+    }
+
+    //enviar credenciales 
+    const onSubmit = (e)=>{
+        e.preventDefault()
+        axios.post('http://localhost:4000/iniciar-sesion', body)
+        .then(({data})=>{
+            console.log(data)
+        })
+        .catch(({response})=>{
+            console.log(response)
+        })
+    }
     return(
         
     <div className="contenedor">
@@ -16,12 +42,30 @@ function Login(){
                     <h2>Ingresa a tu cuenta</h2>
                     <form> 
                         <label htmlFor = {"Usuario"}> Usuario</label>
-                        <input type="text" placeholder="Carne" />
+                        <input 
+                            type="text" 
+                            placeholder="Carne"
+                            value={body.username}
+                            onChange = {inputChange}
+                            name = 'username'
+                        />
 
                         <label htmlFor = {"Contraseña"}> Contraseña</label>
-                        <input type="password" placeholder="Contraseña" />
+                        <input 
+                            type="password" 
+                            placeholder="Contraseña" 
+                            value={body.password}
+                            onChange = {inputChange}
+                            name = 'password'    
+                        />
 
-                        <input type="submit" value="Iniciar sesión" />
+                        <input 
+                            type="submit" 
+                            value="Iniciar sesión" 
+                            onClick={onSubmit}
+                        />
+
+
                         <a href="https://google.com">¿Has olvidado tu contraseña?</a>
                     </form>
             </div>

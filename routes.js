@@ -13,6 +13,9 @@ routes.get('/', (req, res)=>{
     })
 })
 
+
+
+
 routes.post('/registro', (req, res)=>{
     req.getConnection((err, conn)=>{
         if (err) return res.send(err)

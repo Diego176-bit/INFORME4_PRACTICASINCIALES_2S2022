@@ -25,6 +25,22 @@ app.get('/', (req, res)=>{
     res.send('hola soy el servidor')
 })
 
+//ruta para enviar credenciales de inicio de sesión
+app.post('/iniciar-sesion', (req, res)=>{
+    const { username, password } = req.body
+    const values = [username, password]
+    let connection = mysql.createConnection(dbOptions) 
+    connection.query('SELECT * FROM usuarios WHERE registro = ? AND password = ?', values, (err, result)=>{
+        if (err) return res.status(500).send(err)
+        if(result.length > 0){
+            res.status(200).send(result[0])
+        }else{
+            res.status(400).send('usuario no encontrado')
+        }
+        connection.end()
+    })
+})
+
 app.use('/api', routes)
 
 //servidor running----------------------

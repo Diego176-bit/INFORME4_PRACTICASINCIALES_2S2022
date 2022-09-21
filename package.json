@@ -24,6 +24,7 @@
     "mysql": "^2.18.1",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
+    "react-router-dom": "^6.4.0",
     "timeago.js": "^4.0.2"
   },
   "devDependencies": {

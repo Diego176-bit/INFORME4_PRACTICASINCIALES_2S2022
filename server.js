@@ -31,9 +31,11 @@ app.post('/iniciar-sesion', (req, res)=>{
     const values = [username, password]
     let connection = mysql.createConnection(dbOptions) 
     connection.query('SELECT * FROM usuarios WHERE registro = ? AND password = ?', values, (err, result)=>{
+        
         if (err) return res.status(500).send(err)
         if(result.length > 0){
-            res.status(200).send(result[0])
+            res.status(200).send(result)
+            
         }else{
             res.status(400).send('usuario no encontrado')
         }

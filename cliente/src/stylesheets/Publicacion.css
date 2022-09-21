@@ -1,0 +1,20 @@
+
+.card{
+    background-color: #eee;
+    border-bottom: 2px solid #fc7404b4;
+    padding: 20px;
+}
+.nombre-fecha_container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nombre-fecha_container span{
+    color: rgb(119, 106, 106);
+    font-weight: 700;
+}
+.nombre-catedratico-curso{
+    font-size: 20px;
+    font-weight: 900;
+}

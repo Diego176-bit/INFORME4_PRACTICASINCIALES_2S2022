@@ -1,12 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    background: url(https://i.pinimg.com/736x/a7/ad/de/a7adde7aa9859db5cd746709c60ae050.jpg);
-    background-size: contain;
-    font-family: sans-serif;
-    height: 100vh;
-    box-sizing: border-box;
-}
+
 
 .contenedor{
     display: flex;
@@ -16,8 +8,8 @@ body {
 }
 
 h1{
-margin-top: 70px;  
-color: #0066cc;  
+    margin-top: 70px;  
+    color: #0066cc;  
 }
 
 .login{
@@ -95,4 +87,10 @@ color: #0066cc;
     font-size: 12px;
     line-height: 20px;
     color:#0066cc;
+}
+.contenedor-links{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
 }

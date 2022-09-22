@@ -63,7 +63,7 @@
     background-color: #fc7204;
 }
 
-form{
+.form-modal{
     display: flex;
     flex-direction: column;
     width: 500px;
@@ -82,7 +82,18 @@ form input[type=text]{
 textarea{
     height:300px;
 }
-
+.main-inicio{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.publicaciones-container{
+    width: 90%;
+}
+.aside{
+    padding: 20px;
+    min-height: 100vh;
+    border: 2px solid #fc7204;
+}
 .buttons-container{
     display: flex;
     justify-content: center;
@@ -116,3 +127,52 @@ textarea{
 .buttons-container button:hover{
     background-color: 	#ff0000;
 }
+
+/* busqueda */
+/* From uiverse.io by @alexruix */
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+   }
+   
+   .input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+   }
+   
+   .input::placeholder {
+    color: #9e9ea7;
+   }
+   
+   .input:focus, input:hover {
+    outline: none;
+    border-color: #fc7204;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+   }
+   
+   .icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+   }
+   
+   
+   
+   
+   
+   

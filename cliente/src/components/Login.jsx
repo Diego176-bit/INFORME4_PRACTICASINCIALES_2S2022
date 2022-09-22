@@ -2,7 +2,7 @@
 import React from 'react'
 import usacLogo from '../img/fiusac_negro.png'
 import '../stylesheets/Login.css'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Cookies from 'universal-cookie'
@@ -50,6 +50,11 @@ function Login(){
             console.log(response)
         })
     }
+    useEffect(()=>{
+        if(cookies.get('registro')){
+            window.location.href = '/inicio'
+        }
+    }) 
     return(
         
     <div className="contenedor">

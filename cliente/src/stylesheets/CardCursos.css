@@ -1,0 +1,26 @@
+.card-cursos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ee7716c0;
+    width: 100vw;
+    height: 100px;
+    border-bottom: 2px solid #ee7716c0;
+}
+.card-cursos div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    
+
+}
+.label{
+    color: rgba(238, 238, 238, 0.397);
+    font-weight: 700;
+}
+.text{
+    color: #fff;
+    font-weight: 700;
+}

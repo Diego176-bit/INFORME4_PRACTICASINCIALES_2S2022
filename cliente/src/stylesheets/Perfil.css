@@ -1,0 +1,37 @@
+.main-perfil{
+    display: flex;
+    gap: 100px;
+    width: 100%;
+    padding: 20px;
+
+}
+.datos-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #ee7716;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+
+
+}
+.datos-container span{
+    padding: 15px;
+}
+.creditos-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 500px;
+    border-radius: 10px;
+    background-color:#de9c2e;
+    color: #fff;
+    font-size: 25px;
+
+}

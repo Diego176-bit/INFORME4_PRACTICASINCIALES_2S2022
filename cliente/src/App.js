@@ -3,6 +3,7 @@ import './App.css';
 import Login from './components/Login'
 import Registro from './components/Registro'
 import Inicio from './components/Inicio'
+import Perfil from './components/Perfil';
 import {  useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/' element ={ <Login /> }/>
         <Route path='/registro' element ={ <Registro /> }/>
         <Route path='/inicio' element ={ <Inicio /> }/>
+        <Route path='/main-perfil' element ={ <Perfil /> }/>
       </Routes>
     </div>
     
